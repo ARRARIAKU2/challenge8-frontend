@@ -1,4 +1,5 @@
 import Login from "./Pages/Login";
+import Router from "./Routes/routes"
 import { CarsList, CarsCreate, CarsUpdate, CarsDetail } from './Pages/Cars';
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
+      <Router />
     </ThemeProvider>
   );
 
