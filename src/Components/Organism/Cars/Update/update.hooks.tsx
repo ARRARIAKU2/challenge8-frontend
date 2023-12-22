@@ -20,7 +20,7 @@ export default function useCreate() {
     const getDataById = async (id: any) => {
         try {
             const response = await axios.get(
-                `http://localhost:8000/api/cars/${id}`,
+                `https://challenge8-backend-production.up.railway.app/api/cars/${id}`,
                 {
                     headers: {
                         Authorization: localStorage.getItem('token'),
@@ -38,7 +38,7 @@ export default function useCreate() {
         try {
             setLoadingSubmit(true);
             const payload = { ...formValues, picture: fileItem };
-            await axios.put(`http://localhost:8000/api/cars/${id}`, payload, {
+            await axios.put(`https://challenge8-backend-production.up.railway.app/api/cars/${id}`, payload, {
                 headers: {
                     Authorization: localStorage.getItem('token'),
                 },
@@ -60,7 +60,7 @@ export default function useCreate() {
                 formData.append('picture', files[0]);
 
                 const response = await axios.post(
-                    'http://localhost:8000/api/cars/upload',
+                    'https://challenge8-backend-production.up.railway.app/api/cars/upload',
                     formData,
                     {
                         headers: {

@@ -37,7 +37,7 @@ function Login() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/api/login", {
+      const response = await axios.post("https://challenge8-backend-production.up.railway.app/api/login", {
         username,
         password,
       });
