@@ -15,7 +15,7 @@ export default function useCreate() {
         try {
             setLoadingSubmit(true);
             const payload = { ...formValues, picture: fileItem };
-            await axios.post('https://challenge8-backend-production.up.railway.app/api/cars', payload, {
+            await axios.post('https://dull-pear-coati-vest.cyclic.app/api/cars', payload, {
                 headers: {
                     Authorization: localStorage.getItem('token'),
                 },
@@ -37,7 +37,7 @@ export default function useCreate() {
                 formData.append('picture', files[0]);
 
                 const response = await axios.post(
-                    'https://challenge8-backend-production.up.railway.app/api/cars/upload',
+                    'https://dull-pear-coati-vest.cyclic.app/api/cars/upload',
                     formData,
                     {
                         headers: {

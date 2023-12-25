@@ -14,7 +14,7 @@ function useDetail() {
     const getDataById = async (id: any) => {
         try {
             const response = await axios.get(
-                `https://challenge8-backend-production.up.railway.app/api/cars/${id}`,
+                `https://dull-pear-coati-vest.cyclic.app/api/cars/${id}`,
                 {
                     headers: {
                         Authorization: localStorage.getItem('token'),

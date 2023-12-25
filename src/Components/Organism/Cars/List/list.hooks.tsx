@@ -30,7 +30,7 @@ export default function useList() {
         const confirmed = confirm('Are you sure want to delete?');
         if (confirmed) {
             try {
-                await axios.delete(`https://challenge8-backend-production.up.railway.app/api/cars/${record.id}`, {
+                await axios.delete(`https://dull-pear-coati-vest.cyclic.app/api/cars/${record.id}`, {
                     headers: {
                         Authorization: localStorage.getItem('token'),
                     },
@@ -51,7 +51,7 @@ export default function useList() {
         try {
             setLoading(true);
             const response = await axios.get<IApiResponse<ICars[]>>(
-                'https://challenge8-backend-production.up.railway.app/api/cars',
+                'https://dull-pear-coati-vest.cyclic.app/api/cars',
                 {
                     params,
                     headers: {
